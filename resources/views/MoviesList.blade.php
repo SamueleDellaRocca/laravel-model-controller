@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <div class="container">
+
     @foreach ($movies as $movie)
-        <h1>{{ $movie->title }}</h1>
+        <div class="carta">
+            <h1>Titolo Film: {{ $movie->title }}</h1>
+            <h2>Titolo Originale: {{ $movie->original_title }}</h2>
+            <h3>Nazionalità: {{ $movie->nationality }}</h3>
+            <h4>Anno di Uscita: {{ $movie->date }}</h4>
+            <h5>Voto Film: {{ $movie->vote }}</h5>
+        </div>
     @endforeach
+    </div>
+    
 </body>
 </html>
