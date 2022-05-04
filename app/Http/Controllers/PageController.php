@@ -11,7 +11,10 @@ class PageController extends Controller
     {
         $myMovies = Movie::all();
 
-        dd($myMovies);
-        return view('MoviesList', $myMovies);
+        $data = [
+            'movies' => $myMovies,
+        ];
+
+        return view('MoviesList', $data);
     }
 }
